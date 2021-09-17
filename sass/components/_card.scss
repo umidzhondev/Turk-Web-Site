@@ -1,0 +1,124 @@
+.services__cards {
+  margin-top: 100px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  @include responsive(xl) {
+    width: 95%;
+    margin: 100px auto;
+  }
+  @include responsive(lg) {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive(md) {
+    width: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive(sm){
+    width: 90%;
+    margin-top: 80px;
+    grid-template-rows: repeat(auot, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @include responsive(xxs){
+    width: 100%;
+  }
+  .services__card {
+    border-radius: $border-radius-2;
+    box-shadow: -1px 13px 18px 4px #f6c7c7;
+    padding: 30px 0;
+    margin: 0 40px 96px 40px;
+    @include flex(center, center, column);
+    @include transition(all);
+
+    @include responsive(xl) {
+      margin: 0 20px 70px 20px;
+    }
+    @include responsive(md) {
+      margin: 0 15px 70px 15px;
+    }
+    @include responsive(sm) {
+    box-shadow: 0px 0px 19px 4px #f6c7c7;
+      margin: 0 15px 40px 15px;
+      padding: 50px 0;
+    }
+    @include responsive(xxs){
+      padding: 20px 0;
+      margin: 0 10px 40px 10px;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 19px 8px #53c1ff;
+      transform: translateY(-20px) rotateY(25deg);
+      cursor: pointer;
+      @include responsive(sm) {
+        transform: none;
+      }
+    }
+    &-imgbox {
+      width: 76px;
+      height: 76px;
+      position: relative;
+      span {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        opacity: 0.8;
+        right: 0;
+      }
+      .shape-1 {
+        background-color: $shape-color-1;
+      }
+      .shape-2 {
+          top: 9px;
+        left: 0;
+        background-color: $shape-color-2;
+      }
+      .shape-3 {
+          top: 8px;
+          right: -4px;
+        background-color: $shape-color-3;
+      }
+      .shape-4 {
+          top: 9px;
+        background-color: $shape-color-4;
+        left: 0;
+        @include responsive(sm){
+          top: 17px;
+          left: -3px;
+        }
+      }
+      .shape-5 {
+        background-color: $shape-color-5;
+      }
+      .shape-6 {
+          right: 13px;
+          top: -5px;
+        background-color: $shape-color-6;
+        @include responsive(sm){
+          top: -5px;
+          right: 5px;
+        }
+      }
+    }
+    &-title {
+      line-height: 33px;
+      font-weight: 800;
+      margin: 17px 0 10px 0;
+    }
+    &-description {
+      line-height: 28px;
+      letter-spacing: 0.2px;
+      font-size: 18px;
+      width: 81%;
+      @include responsive(xs){
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.header {
+  padding: 45px 122px 148px 122px;
+  @include responsive(xl) {
+    padding: 45px 80px 148px 80px;
+  }
+  @include responsive(lg) {
+    padding: 45px 30px 148px 60px;
+    background-position-x: 28%;
+  }
+  @include responsive(md) {
+    background-position-x: 60%;
+    position: relative;
+  }
+  @include responsive(sm) {
+    padding: 45px 20px 100px 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: color-burn;
+  }
+  @include responsive(xs) {
+    padding: 32px 5px 90px 5px;
+  }
+  @include responsive(xxs) {
+    padding: 25px 5px 90px 5px;
+  }
+  background-image: url("/image/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__main {
+    margin-top: 135px;
+    @include flex(flex-start, flex-start, column);
+    width: 45%;
+    @include responsive(xl) {
+      width: 52%;
+    }
+    @include responsive(lg) {
+      width: 63%;
+    }
+    @include responsive(lg) {
+      width: 75%;
+      margin-top: 150px;
+    }
+    @include responsive(md){
+      width: 75%;
+    }
+    @include responsive(sm) {
+      width: 90%;
+      text-align: start;
+      align-items: flex-start;
+    }
+    @include responsive(xs) {
+      width: 100%;
+      text-align: center;
+      align-items:center;
+      margin-top: 90px;
+    }
+  }
+  &__title {
+    font-weight: 900;
+    line-height: 82px;
+    width: 95%;
+    @include responsive(sm){
+      font-size: 48px;
+    }
+    @include responsive(xs){
+      line-height: 70px;
+    }
+    @media (max-width: 470px) {
+      font-size: 35px;
+    }
+    @include responsive(xxs){
+      font-size: 30px;
+    }
+  }
+  &__description {
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    @include responsive(sm) {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    @media (max-wdith: 470px) {
+      margin-top: 10px;
+    }@include responsive(xxs) {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.text-end {
+  text-align: end;
+}
+.text-start {
+  text-align: start;
+}
+.mb-120 {
+  margin-top: 120px;
+  @include responsive(xs){
+   margin-top: 65px;     
+  }
+}
+.pl-50{
+  padding-left: 30px;
+  @include responsive(sm){
+   padding-left: 0;   
+  }
+}
+.mb-70{
+  margin-bottom: 0;
+  @include responsive(xs){
+    margin-bottom: 70px;
+  }
+}

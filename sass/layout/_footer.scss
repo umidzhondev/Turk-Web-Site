@@ -1,0 +1,102 @@
+.footer {
+  background-color: $color-bg-2;
+  color: $color-white;
+  padding: 70px 0 40px 0;
+  &__content {
+    @include flex(space-between, flex-start, column);
+    @include responsive(xl) {
+      width: 90%;
+      margin: 0 auto;
+    }
+    @include responsive(lg) {
+      width: 95%;
+      margin: 0 auto;
+    }
+    @include responsive(lg) {
+      width: 98%;
+      margin: 0 auto;
+    }
+  }
+  &__nav {
+    width: 80%;
+    @include responsive(xl) {
+      width: 90%;
+    }
+    @include responsive(lg) {
+      width: 100%;
+    }
+    @include responsive(md) {
+      flex-wrap: wrap;
+    }
+    @include responsive(sm){
+      flex-direction: column; 
+    }
+    @include flex(space-between, flex-start, row);
+  }
+  &__nav-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    @include responsive(sm){
+     font-size: 20px; 
+    }
+  }
+  &__nav-link {
+    margin: 24px 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 10px;
+    color: #e6e6e6;
+    @extend .transition;
+    @include responsive(sm){
+      line-height: 5px;
+      font-size: 20px;
+    };
+    @include responsive(xs){
+      line-height: 5px;
+      font-size: 17px;
+    };
+    @include responsive(xxs){
+      line-height: 5px;
+      font-size: 15px;
+    };
+    &:hover {
+      color: #111;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+  &__nav-links {
+
+    @include flex(flex-start, flex-start, column);
+    @include responsive(md) {
+      margin-bottom: 30px;
+    }
+    @include responsive(sm){
+    margin-bottom: 40px;
+    }
+  }
+  &__footer {
+    width: 90%;
+    margin-top: 50px;
+    @include flex(space-between, center, row);
+    @include responsive(sm){
+     flex-direction: column; 
+     justify-content: flex-start;
+     align-items: flex-start;
+    }
+    img {
+      margin-left: 15px;
+      @include responsive(sm){
+      margin-right: 0;
+      margin-left: 15px;
+      }
+    }
+  }
+  .social__icons{
+    @include responsive(sm){
+      margin-top: 40px;
+    }
+  }
+}

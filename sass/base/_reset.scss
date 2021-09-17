@@ -1,0 +1,33 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    box-sizing: inherit;
+    overflow-x: hidden !important;
+}
+body{
+    box-sizing: border-box;
+    overflow-x: hidden !important;
+    font-family: "Manrope-Regular",sans-serif ;
+}
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+input{
+    border: none;
+    background-color: transparent;
+}

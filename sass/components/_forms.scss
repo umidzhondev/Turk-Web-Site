@@ -1,0 +1,29 @@
+.header__form {
+  @include flex(flex-start, center, row);
+  width: 80%;
+  position: relative;
+  @include responsive(sm){
+    width: 90%;
+  }
+  .header__form-input {
+    outline: none;
+    border: none;
+    padding: 15px 0 15px 32px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.2px;
+    background-color: $color-white;
+    border-radius: $border-radius-2;
+    width: 100%;
+    @include responsive(sm){
+      padding: 10px 0 10px 32px;
+    }
+    @include responsive(xxs){
+      padding: 10px 0 10px 12px;
+    }
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}

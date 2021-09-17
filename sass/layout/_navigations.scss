@@ -1,0 +1,100 @@
+.nav {
+  @include flex(flex-end, center);
+  @include responsive(lg) {
+    margin-right: 40px;
+  }
+  @include responsive(md) {
+    margin-right: 0;
+    @include flex(space-between, center);
+    padding: 0 20px;
+  }
+
+  &__links {
+    @include flex(center, center);
+    transform: none;
+
+    transition: transform 0.4s ease-out;
+
+    @include responsive(md) {
+      transform: translateX(-100%);
+      @include flex(center, center, column);
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      background-color: #f2f2f2;
+      width: 50vw;
+      height: 100vh;
+      top: 0;
+    }
+    @include responsive(sm) {
+      width: 50vw;
+    }
+    @include responsive(xs) {
+      width: 60vw;
+    }
+    @include responsive(xxs) {
+      width: 70vw;
+    }
+  }
+  &__item {
+    margin-right: 40px;
+
+    @include responsive(md) {
+      margin-right: 0;
+      margin-top: 40px;
+      display: block;
+    }
+    @include responsive(xs) {
+      margin-top: 0px;
+    }
+  }
+  &__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    @extend .transition;
+    &:hover {
+      color: $color-primary;
+      font-weight: 900;
+    }
+
+    @include responsive(md) {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 70px;
+    }
+
+    @include responsive(xs) {
+      font-size: 16px;
+    }
+  }
+  &__close {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    display: none;
+    @include responsive(md) {
+      display: inline-block;
+    }
+    @media (max-width: 340px) {
+      top: 20px;
+      right: 0;
+    }
+  }
+  .toggle__menu-btn {
+    display: none;
+    width: 32px;
+    height: 32px;
+    @include responsive(md) {
+      display: inline-block;
+    }
+  }
+  .open-nav {
+    transform: translateX(0);
+  }
+  .close-nav {
+    transform: translateX(-100%);
+  }
+}

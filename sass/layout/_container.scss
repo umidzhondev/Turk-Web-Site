@@ -1,0 +1,10 @@
+.container{
+    width: 1440px;
+    margin: 0 auto;
+    @include responsive(xl) {
+        width: 1200px;
+    }
+    @include responsive(lg) {
+        width: 95vw;
+    }
+}

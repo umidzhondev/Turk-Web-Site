@@ -1,0 +1,55 @@
+@mixin flex($jc: flex-start, $ai: flex-start, $dr: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $dr;
+}
+@mixin center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin transition($property) {
+  transition: $property 0.4s ease;
+}
+
+@mixin ml-3 {
+  .ml-3 {
+    margin-left: 3rem;
+  }
+}
+
+// * Responsive media mixins
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == xl {
+    @media screen and (max-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media screen and (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == xs {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint == xxs {
+    @media screen and (max-width: 410px) {
+      @content;
+    }
+  }
+}

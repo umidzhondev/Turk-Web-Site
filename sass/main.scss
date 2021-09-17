@@ -1,0 +1,33 @@
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+@import "./abstracts/extends";
+
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/utilities";
+
+@import "./components/buttons";
+@import "./components/card";
+@import "./components/forms";
+
+@import "./layout/header";
+@import "./layout/container";
+@import "./layout/navigations";
+@import "./layout/footer";
+
+@import "./pages/home";
+
+@font-face {
+    font-family: 'Manrope-Regular';
+    src: url("/font/Manrope-Regular.ttf");
+}
+@font-face {
+    font-family: 'Manrope-Bold';
+    src: url("/font/Manrope-Bold.ttf");
+}
+@font-face {
+    font-family: 'Manrope-Medium';
+    src: url("/font/Manrope-Medium.ttf");
+}
+
+

@@ -1,0 +1,400 @@
+.services {
+  padding: 120px 0 140px 0;
+  text-align: center;
+  @include responsive(xl) {
+    padding: 70px 0 50px 0;
+  }
+  @include responsive(lg) {
+    padding: 70px 0 20px 0;
+  }
+  @include responsive(md) {
+    padding: 70px 0 0 0;
+  }
+  &__title {
+    line-height: 49px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    @include responsive(sm) {
+      margin-bottom: 15px;
+      font-size: 36px;
+    }
+    @include responsive(xxs) {
+      font-size: 30px;
+    }
+  }
+  &__description {
+    line-height: 39px;
+    letter-spacing: 0.2px;
+    font-size: 24px;
+    width: 70%;
+    opacity: 0.8;
+    margin: 0 auto;
+    @include responsive(lg) {
+      width: 94%;
+    }
+    @include responsive(md) {
+      font-size: 18px;
+    }
+    @include responsive(sm) {
+      font-size: 16px;
+      letter-spacing: 0.8;
+    }
+    @include responsive(xxs) {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.8;
+    }
+  }
+}
+.management {
+  color: $color-white;
+  padding: 70px 0;
+  background-color: $color-bg-2;
+  @include responsive(sm) {
+    padding: 50px 0;
+  }
+  @include responsive(xs) {
+    padding: 30px 0;
+  }
+  .container {
+    @include flex(center, center, column);
+  }
+  &__header {
+    text-align: center;
+    @include responsive(xs) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    font-feature-settings: "liga" off;
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 800;
+    @include responsive(lg) {
+      font-size: 55px;
+    }
+    @include responsive(lg) {
+      font-size: 40px;
+    }
+    @include responsive(xs) {
+      font-size: 36px;
+    }
+    @include responsive(xxs) {
+      font-size: 30px;
+    }
+  }
+  &__subtitle {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 32px;
+  }
+  &__body {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+
+    @include responsive(xl) {
+      width: 95%;
+    }
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 50px;
+    }
+    @include responsive(sm) {
+      padding-top: 60px;
+    }
+    @include responsive(xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include responsive(xxs) {
+     padding-top: 40px;
+    }
+  }
+  &__textbox {
+    text-align: start;
+    @include flex(flex-start, center, row);
+    @include responsive(md) {
+      @include flex(center, center, row);
+    }
+    @include responsive(xs) {
+      @include flex(center, center, column);
+      text-align: center;
+    }
+  }
+  &__text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 31px;
+    width: 70%;
+    @include responsive(lg) {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    @include responsive(md) {
+      width: 60%;
+    }
+    @include responsive(xs) {
+      width: 50%;
+    }
+  }
+  &__icon {
+    width: 32px;
+    height: 32px;
+    @include responsive(xs) {
+      transform: rotate(90deg);
+      margin-top: 20px;
+    }
+  }
+}
+.about {
+  padding: 180px 0 160px 0;
+  @include responsive(xl) {
+    padding: 120px 0 140px 0;
+  }
+  @include responsive(lg) {
+    padding: 150px 0;
+  }
+  @include responsive(md) {
+    padding: 110px 0;
+  }
+  @include responsive(xs) {
+    padding: 70px 0;
+  }
+  &__content {
+    @include flex(center, center, column);
+    width: 90%;
+    margin: 0 auto;
+    @include responsive(lg) {
+      width: 98%;
+    }
+    @include responsive(sm) {
+      width: 95%;
+    }
+  }
+  &__box {
+    @include flex(center, space-between, row);
+    @include responsive(sm) {
+      @include flex(center, space-between, column);
+    }
+  }
+  &__info {
+    width: 45%;
+    margin: 0 auto;
+    @include flex(flex-start, flex-start, column);
+    @include responsive(xl) {
+      width: 50%;
+    }
+    @include responsive(md) {
+      justify-content: space-between;
+    }
+    @include responsive(sm) {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+  }
+  &__img {
+    width: 50%;
+    @include responsive(lg) {
+      width: 45%;
+    }
+    @include responsive(sm) {
+      width: 100%;
+      order: -1;
+      text-align: center;
+    }
+    img {
+      width: 504px;
+      height: 480px;
+      @include responsive(lg) {
+        width: 424px;
+        height: 404px;
+      }
+      @include responsive(sm) {
+        width: 90vw;
+        height: 45vh;
+        object-fit: cover;
+        border-radius: $border-radius-2 + 5px;
+        margin-bottom: 30px;
+      }
+      @include responsive(xs){
+        height: 40vh;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__info-title {
+    font-weight: 700;
+    line-height: 76px;
+    font-family: "Manrope-Medium";
+    color: $color-dark;
+    width: 80%;
+    @include responsive(xl) {
+      width: 100%;
+    }
+    @include responsive(md) {
+      font-size: 36px;
+      line-height: 60px;
+      width: 95%;
+    }
+    @include responsive(xs) {
+      font-size: 30px;
+      line-height: 45px;
+      width: 95%;
+    }
+  }
+  &__info-description {
+    width: 90%;
+    color: $color-secondary;
+    line-height: 32px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    @include responsive(xl) {
+      width: 100%;
+    }
+    @include responsive(lg) {
+      font-size: 14px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      width: 94%;
+    }
+    @include responsive(md) {
+      line-height: 30px;
+      margin-top: 15px;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+    @include responsive(sm){
+      margin-top: 25px;
+      margin-bottom: 35px;
+      font-size: 17px;
+      line-height: 35px;
+    }
+    @include responsive(xs){
+      margin-top: 5px;
+      margin-bottom: 35px;
+      font-size: 14px;
+      line-height: 32px;
+    }
+  }
+}
+.partners {
+  padding: 60px 0 0px 0;
+  background-color: $color-bg-1;
+  &__content {
+    @include flex(center, center, column);
+    text-align: center;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    color: $color-dark-2;
+    @include responsive(sm) {
+      font-size: 36px;
+    }
+    @include responsive(xs){
+     color: $color-black; 
+     font-weight: 700;
+    }
+    @include responsive(xxs){
+     color: $color-black; 
+     font-weight: 600;
+     font-size: 30px;
+    }
+  }
+  &__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: $color-dark-2;
+    margin-top: 5px;
+    @include responsive(sm) {
+      font-size: 18px;
+    }
+    @include responsive(xs){
+     font-size: 18px !important; 
+     font-weight: 400 !important;  
+    }
+    @include responsive(xxs){
+     font-size: 18px !important; 
+     font-weight: 400 !important;  
+    }
+  }
+  &__imgboxs {
+    @include flex(center, center, row);
+    margin-top: 48px;
+    @include responsive(xs){
+      flex-direction: column
+    }
+  }
+  &__imgbox {
+    @include flex(center, center, column);
+    .partners__img{
+      @include responsive(xs){
+        width: 300px;
+      }
+    }
+    img{
+      @include responsive(xs){
+        width: 200px;
+      }
+    }
+    @include responsive(xs){
+      flex-direction: column
+    }
+  }
+}
+.contact {
+  padding: 160px 0;
+  @include responsive(md) {
+    padding: 140px 0;
+  }
+  @include responsive(xs) {
+    padding: 85px 0;
+  }
+  &__content {
+    @include flex(center, center, column);
+    text-align: center;
+  }
+  &__imgbox {
+    position: relative;
+    .contact__shape {
+      position: absolute;
+      right: 0;
+      top: 7px;
+      background-color: $shape-color-5;
+      opacity: 0.8;
+      border-radius: 50%;
+      width: 61px;
+      height: 61px;
+    }
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    line-height: 32px;
+    @include responsive(sm) {
+      font-size: 36px;
+    }
+    @include responsive(xxs) {
+      font-size: 30px;
+    }
+  }
+  &__subtitle {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
